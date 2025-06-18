@@ -1,0 +1,64 @@
+Bibliography
+National Neighborhood Data Archive (NaNDA): Voter Registration, Turnout,
+and Partisanship by County, United States, 2004-2022
+
+This bibliography includes published and unpublished works that are related 
+to ICPSR study 38506. It includes works that are based on primary
+or secondary analysis of the data, or which describe or critique those
+data or the collection methodology. 
+
+If you publish a work or know of other works that are based on these data,
+please send the complete citation and name of the ICPSR study used to:
+icpsr-biblio-notify@umich.edu 
+
+
+1. Amin, Raid; Angstadt, Alexis; Dragomirov, Vladimir; Drury, Maria;
+Farinas, Kyra; Mezzano, Michael; Muller, Amy; Waterhouse, Paul, "Clusters
+of jail incarcerations in U.S. counties: 2010-2018." Statistics and Public
+Policy. 2024, 11, (1),. DOI: 10.1080/2330443X.2024.2342777
+
+2. Auerbach, Alan J.; Gorodnichenko, Yuriy; Murphy, Daniel, "Demand
+Stimulus as Social Policy." NBER Working Paper No. 30498. Cambridge, MA:
+National Bureau of Economic Research, Sep 2022. DOI: 10.3386/w30498
+Abstract: https://www.nber.org/papers/w30498
+
+3. Grace A Noppert; Philippa Clarke; Andrew Hoover; John Kubale; Robert
+Melendez; Kate Duchowny; Sonia T Hegde, "State variation in neighborhood
+COVID-19 burden: Findings from the COVID neighborhood project." Preprint.
+medRxiv, May 2023.. DOI: 10.1101/2023.05.19.23290222
+Abstract: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1
+Full text PDF: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1.full.pdf
+
+4. Grade, Madeline M.; Reardon, Alexander W. T.; Ha, Yoonhee P.; Steinhart,
+Adi; Martin, Alister F., "The healthy democracy kit: Design,
+implementation, uptake, and impact of a novel voter registration toolkit
+for healthcare settings." BMC Public Health. 2023, 23,. DOI:
+10.1186/s12889-023-15800-x
+Abstract: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1
+Full text PDF: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1.full.pdf
+
+5. Monarrez, Tomas E., "School attendance boundaries and the segregation of
+public schools in the United States." American Economic Journal: Applied
+Economics. 2023, 15, (3), 210 - 37. DOI: 10.1257/app.20200498
+Abstract: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1
+Full text PDF: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1.full.pdf
+
+6. Noppert, Grace A.; Clarke, Philippa; Hoover, Andrew; Kubale, John;
+Melendez, Robert; Duchowny, Kate; Hegde, Sonia T., "State variation in
+neighborhood COVID-19 burden across the United States." Communications
+Medicine. Mar 2024, 36,. DOI: 10.1038/s43856-024-00459-1
+Abstract: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1
+Full text PDF: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1.full.pdf
+
+7. Parker, Gary; Hutti, Ellen, "Race, poverty and unemployment as
+quantitative predictors of voter turnout in St. Louis amidst COVID-19 and a
+racial justice movement." International Journal of Sociology and Social
+Policy. in press 2022,. DOI: 10.1108/IJSSP-02-2022-0061
+Abstract: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1
+Full text PDF: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1.full.pdf
+
+8. Willse, Cadence, "The geography of giving: Nonprofit philanthropy,
+public parks and land conservation in the United States." Conservation
+Science and Practice. In Press 2023,. DOI: 10.1111/csp2.12890
+Abstract: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1
+Full text PDF: https://www.medrxiv.org/content/10.1101/2023.05.19.23290222v1.full.pdf

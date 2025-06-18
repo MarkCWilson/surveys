@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+				<title>Description Citation</title>
+		<link href='https://www.icpsr.umich.edu/web/resources/commons/scripts/bootstrap-3.4.1-dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+		
+		<style>
+		
+		body {
+    			font-family: 'Open Sans', sans-serif;
+    		}
+		h1 {
+    			font-size: 30px;
+		}
+		
+		h2 {
+    			font-size: 26px;
+		}
+		
+		h3 {
+    			font-size: 22px;
+		}
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="study-title">National Neighborhood Data Archive (NaNDA): Voter Registration, Turnout, and Partisanship by County, United States, 2004-2022 (ICPSR 38506)</h1>
+				<p><span><strong>Principal Investigator(s):</strong>
+						Will Clary, University of Michigan. Institute for Social Research; 
+						Iris N. Gomez-Lopez, University of Michigan. Institute for Social Research; 
+						Megan Chenoweth, University of Michigan. Institute for Social Research; 
+						Lindsay Gypin, University of Michigan. Institute for Social Research; 
+						Philippa Clarke, University of Michigan. Institute for Social Research; 
+						Grace Noppert, University of Michigan. Institute for Social Research; 
+						Mao Li, University of Michigan. Institute for Social Research; 
+						Ken Kollman, University of Michigan. Institute for Social Research
+				</span>
+				</p>
+		        		<h2>Project Description:</h2>
+								<p><span><strong>Summary:</strong> This dataset contains counts of voter registration and voter turnout for all counties in the United States for the years 2004-2022. It also contains measures of each county's Democratic and Republican partisanship, including six-year longitudinal partisan indices for 2006-2022.</span></p>
+								<p><span><strong>Citation:</strong> <div class="csl-bib-body">
+  <div class="csl-entry">Clary, Will, Gomez-Lopez, Iris N., Chenoweth, Megan, Gypin, Lindsay, Clarke, Philippa, Noppert, Grace, … Kollman, Ken. National Neighborhood Data Archive (NaNDA): Voter Registration, Turnout, and Partisanship by County, United States, 2004-2022. Inter-university Consortium for Political and Social Research [distributor], 2024-10-14. https://doi.org/10.3886/ICPSR38506.v2</div>
+</div></span></p>
+								<div><strong>Funding:</strong> <p>United States Department of Health and Human Services. Administration for Community Living. National Institute on Disability, Independent Living, and Rehabilitation Research (90RTHF0001), United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging (RF1-AG-057540), United States Department of Health and Human Services. National Institutes of Health. National Institute of Nursing Research (U01NR020556), United States Department of Health and Human Services. National Institutes of Health. National Center on Minority Health and Health Disparities (U01NR020556)</p></div>
+								<div><strong>Subject Terms:</strong> <p>congressional elections (US Senate), political partisanship, presidential elections, voter registration, voter turnout, voters</p></div>
+								<div><strong>Geographic Coverage:</strong> <p>United States</p></div>
+								<p><span><strong>Smallest Geographic Unit:</strong> County Federal Information Processing System (FIPS)</span></p>
+								<div><strong>Distributor(s):</strong> <p>Inter-university Consortium for Political and Social Research</p></div>
+		        		<h2>Scope of Project:</h2>
+								<div><strong>Time Period(s):</strong> <p>2004 -- 2022</p></div>
+								<div><strong>Date of Collection:</strong> <p>2018 -- 2024</p></div>
+								<div><strong>Data Collection Notes:</strong> <p>The initial release version of these data and documentation (years 2004-2018, version 1) were originally deposited in <a href="https://doi.org/10.3886/E125781">openICPSR 125781</a>., For additional information, see
+<a href="https://nanda.isr.umich.edu/">the National Neighborhood Data Archive (NaNDA)</a>.</p></div>
+		        		<h2>Methodology:</h2>
+								<p><span><strong>Study Purpose:</strong> This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.</span></p>
+								<p><span><strong>Study Design:</strong> <p>
+<strong>Voter Registration and Turnout</strong>
+</p>
+<p>
+To construct measures of voter registration and turnout, researchers calculated three figures for each county in the United States:
+<ol>
+<li>Registered voters: the total number of people registered to vote in the county</li>
+<li>Ballots cast: the total number of votes cast in the November general election for each year</li>
+<li>Voting population: researchers evaluated three possible measures for this component and selected Citizen Voting Age Population (CVAP), which excludes noncitizens</li>
+</ol>
+</p>
+<p>
+Researchers then calculated three ratios using these components:
+<ol>
+<li>Voter registration: registered voters / voting population</li>
+<li>Voter turnout: ballots cast / voting population</li>
+<li>Registered voter turnout: ballots cast / registered voters</li>
+</ol>
+</p>
+<p>
+<strong>Partisanship</strong>
+</p>
+<p>
+For the years 2006-2022, researchers calculated Democratic and Republican partisanship indices for each county based on its voting history in presidential and Senate races over the current and three prior elections. Researchers built this index based on votes for president and senator because these races occur consistently in even years in all fifty U.S. states.
+</p>
+<p>
+Researchers extracted votes for Democratic and Republican presidential candidates from county-level data on presidential election outcomes for the years 2000-2022. For Senate races, researchers summarized 2000-2022 precinct-level votes for Democratic and Republican candidates to the county level, then joined them with the presidential election vote counts. This resulted in four figures per county per year:
+<ol>
+<li>PRES_DEM_VOTES: Votes for Democratic presidential candidates</li>
+<li>PRES_REP_VOTES: Votes for Republican presidential candidates</li>
+<li>SEN_DEM_VOTES: Votes for Democratic Senate candidates</li>
+<li>SEN_REP_VOTES: Votes for Republican Senate candidates</li>
+</ol>
+</p>
+<p>
+For each county and year, researchers created four ratios:
+<ol>
+<li>PRES_DEM_RATIO: PRES_DEM_VOTES / (PRES_DEM_VOTES + PRES_REP_VOTES)</li>
+<li>PRES_REP_RATIO: PRES_REP_VOTES / (PRES_DEM_VOTES + PRES_REP_VOTES)</li>
+<li>SEN_DEM_RATIO: SEN_DEM_VOTES / (SEN_DEM_VOTES + SEN_REP_VOTES)</li>
+<li>SEN_REP_RATIO: SEN_REP_VOTES / (SEN_DEM_VOTES + SEN_REP_VOTES)</li>
+</ol>
+</p>
+<p>
+Researchers then calculated annual Democratic and Republican partisanship indices and six-year aggregate Democratic and Republican partisanship indices for each county for 2006 through 2022. The Democratic index is the average of the presidential and Senate Democratic vote ratios over the current and previous four elections. The Republican index is calculated using Republican vote ratios in the same manner. The two indices add up to one for each county and year.
+</p>
+<p>
+For greater details regarding this process, users should consult the accompanying documentation.
+</p></span></p>
+								<div><strong>Time Method:</strong> <p>Longitudinal</p></div>
+								<p><span><strong>Universe:</strong> Counties in the United States, excluding Alaska and island territories.</span></p>
+								<div><strong>Unit(s) of Observation:</strong> <p>Geographic Unit (County), Time Unit (Year)</p></div>
+								<div><strong>Data Source:</strong> <p>Data on voter registration and turnout was taken from the Election Administration and Voting Survey (EAVS) datasets (United States Election Assistance Commission, 2004-2022). The EAVS is conducted every two years following a federal election by the United States Election Assistance Commission (USEAC). Information on voting, voter registration, and election administration is collected from local election officials at the state and county levels (USEAC, 2020)., Citizen voting age population (CVAP), which is used to calculate voter turnout, was taken from United States Census Bureau data sources, specifically the 2000 decennial census and the 2012, 2017, and 2022 American Community Survey five-year estimates. More information about how the researchers selected CVAP for each year is available in the methodology section of the study documentation., Partisanship indices are constructed from county-level presidential election results and precinct-level Senate election results. All presidential race data comes from the MIT Election Data and Science Lab (2021). Senate race data for 2000-2018 comes from the Harvard Election Data Archive (Ansolabehere et al., 2014, Ansolabehere et al., 2018). Senate race data from 2020-2022 come from the MIT Election Data and Science Lab (2022, 2023)., The initial release version of these data and documentation (years 2004-2018, version 1) were originally deposited in <a href="https://doi.org/10.3886/E125781">openICPSR 125781</a>.</p></div>
+								<div><strong>Data Type(s):</strong> <p>aggregate data</p></div>
+								<div><strong>Mode of Data Collection:</strong> <p>record abstracts</p></div>
+		        		<h2>Version(s):</h2>
+								<p><span><strong>Original Release Date:</strong> 2022-08-31</span></p>
+								<div><strong>Version History:</strong> <p>2024-10-14 The dataset and documentation were updated to revise data for 2018, and to add data for 2020 and 2022.<p><p>2022-08-31 ICPSR data undergo a confidentiality review and are altered when necessary to limit the risk of disclosure. ICPSR also routinely creates ready-to-go data files along with setups in the major statistical software formats as well as standard codebooks to accompany the data. In addition to these procedures, ICPSR performed the following processing steps for this data collection:</p><ul><li>Checked for undocumented or out-of-range codes.</li></ul></p></div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
+

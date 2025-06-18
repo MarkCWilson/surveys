@@ -1,0 +1,61 @@
+File Manifest for ICPSR 38506
+
+Clary, Will, Iris N. Gomez-Lopez, Megan Chenoweth, Lindsay Gypin, Philippa
+Clarke, Grace Noppert, Mao Li, and Ken Kollman. National Neighborhood Data
+Archive (NaNDA): Voter Registration, Turnout, and Partisanship by County,
+United States, 2004-2022. ICPSR38506-v2. Ann Arbor, MI: Inter-university
+Consortium for Political and Social Research [distributor], 2024-10-14.
+http://doi.org/10.3886/ICPSR38506.v2
+
+Details on the version history can be found below the file listings.
+
+
+Study-level Documentation
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    38506-descriptioncitation.pdf       -       -         -       2024-10-14  -
+
+    38506-related_literature.txt        -       -         -       daily       -
+
+    38506-manifest.txt                  -       -         -       daily       -
+
+
+DS0001 National Neighborhood Data Archive (NaNDA): Voter Registration,
+Turnout, and Partisanship by County, United States, 2004-2022
+
+    Filename                            Record  Record    Var.    Date        MD5
+                                        Length  Count     Count   Updated     Checksum
+
+    38506-0001-Codebook-ICPSR.epub      -       -         -       2024-10-14  ae564fbe9e7b96036bafceb3a2fe6618
+
+    38506-0001-Codebook-ICPSR.pdf       -       -         -       2024-10-14  20822eb5ea7e9ddd2edfe0a8b72e9ae6
+
+    38506-0001-Data.dta                 -       35,278    18      2024-10-14  fb4ee4228aa3f4b991da84f010d8646a
+
+    38506-0001-Data.rda                 -       35,278    18      2024-10-14  03d073325a4fbaced5d7021a05c9e63e
+
+    38506-0001-Data.sav                 -       35,278    18      2024-10-14  15f52e55d0fe3f8d8cb235ac55c44d08
+
+    38506-0001-Data.stc                 -       35,278    18      2024-10-14  9a4e9333cd807c8d2aefc2c792ab2e26
+
+    38506-0001-Data.tsv                 -       35,278    18      2024-10-14  2010a538e75dfe443730de7c4bd25816
+
+    38506-0001-Data.txt                 217     35,278    18      2024-10-14  797822cb6cd52826440b6bec54fc6eaa
+
+    38506-0001-Documentation.pdf        -       -         -       2024-10-14  5362e16d0f0733efc5fae68cffeadac1
+
+    38506-0001-Setup.dct                -       -         -       2024-10-14  46f181b75e2f6115f64066f04dfe76c7
+
+    38506-0001-Setup.do                 -       -         -       2024-10-14  d95f5af9f8518526a598048b418d3cf7
+
+    38506-0001-Setup.sas                -       -         -       2024-10-14  4a420b90b86a999224b7405edf433a99
+
+    38506-0001-Setup.sps                -       -         -       2024-10-14  069e2432a015f6d2ff58584726c0f286
+
+
+Version History
+
+2024-10-14 The dataset and documentation were updated to revise data for
+2018, and to add data for 2020 and 2022.
