@@ -1,0 +1,1334 @@
+--------------------------------------------------------------------------------
+Codebook for NHGIS data file 'nhgis0002_ts_nominal_county'
+--------------------------------------------------------------------------------
+ 
+Contents
+    - Data Summary
+    - Data Dictionary
+    - Geographic Integration Methods
+    - Source Data
+    - Citation and Use
+ 
+Detailed notes on time series design and comparability are available at: 
+    https://www.nhgis.org/sites/www.nhgis.org/files/nhgis_time_series_tables.pdf 
+ 
+--------------------------------------------------------------------------------
+Data Summary
+--------------------------------------------------------------------------------
+ 
+Time series layout:     Time varies by row
+Geographic level:       County (by State)
+Geographic integration: Nominal
+Measurement times:      1970, 1980, 1990, 2000, 2010, 2006-2010, 2007-2011, 2008-2012, 2009-2013, 2010-2014, 2011-2015, 2012-2016, 2013-2017, 2014-2018, 2015-2019, 2020, 2016-2020, 2017-2021, 2018-2022, 2019-2023
+Extent:                 All areas
+ 
+Tables:
+ 
+1. Persons by Race [5*]
+   Selected year(s): 1970, 1980, 1990, 2000, 2010, 2011-2015, 2012-2016, 2013-2017, 2014-2018, 2015-2019, 2020, 2016-2020, 2017-2021, 2018-2022, 2019-2023
+   Code: B18
+ 
+2. Persons 25 Years and Over by Educational Attainment [3]
+   Selected year(s): 1970, 1980, 1990, 2000, 2006-2010, 2007-2011, 2008-2012, 2009-2013, 2010-2014, 2011-2015, 2012-2016, 2013-2017, 2014-2018, 2015-2019, 2016-2020, 2017-2021, 2018-2022, 2019-2023
+   Code: B69
+ 
+3. Per Capita Income in Previous Year
+   Selected year(s): 1980, 1990, 2000, 2006-2010, 2007-2011, 2008-2012, 2009-2013, 2010-2014, 2011-2015, 2012-2016, 2013-2017, 2014-2018, 2015-2019, 2016-2020, 2017-2021, 2018-2022, 2019-2023
+   Code: BD5
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Context Fields 
+        GISJOIN:     GIS Join Match Code
+        YEAR:        Row Source Year
+        STATE:       NHGIS Integrated State Name
+        STATEFP:     FIPS State Code
+        STATENH:     NHGIS Integrated State Code
+        COUNTY:      NHGIS Integrated County Name
+        COUNTYFP:    FIPS County Code
+        COUNTYNH:    NHGIS Integrated County Code
+        NAME:        Year-Specific Area Name
+ 
+Table 1: (B18) Persons by Race [5*]
+        B18AA:       Persons: White (single race)
+        B18AB:       Persons: Black or African American (single race)
+        B18AC:       Persons: American Indian and Alaska Native (single race)
+        B18AD:       Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AE:       Persons: Two or More Races
+ 
+Table 2: (B69) Persons 25 Years and Over by Educational Attainment [3]
+        B69AA:       Persons: 25 years and over ~ Less than 9th grade
+        B69AB:       Persons: 25 years and over ~ 9th grade to 3 years of college (until 1980) or to some college or associate's degree (since 1990)
+        B69AC:       Persons: 25 years and over ~ 4 or more years of college (until 1980) or bachelor's degree or higher (since 1990)
+ 
+Table 3: (BD5) Per Capita Income in Previous Year
+        BD5AA:       Per capita income in previous year
+ 
+Margins of Error 
+(Provided for American Community Survey data only) 
+ 
+Table 1: (B18) Persons by Race [5*]
+        B18AAM:      Margin of error: Persons: White (single race)
+        B18ABM:      Margin of error: Persons: Black or African American (single race)
+        B18ACM:      Margin of error: Persons: American Indian and Alaska Native (single race)
+        B18ADM:      Margin of error: Persons: Asian and Pacific Islander and Other Race (single race)
+        B18AEM:      Margin of error: Persons: Two or More Races
+ 
+Table 2: (B69) Persons 25 Years and Over by Educational Attainment [3]
+        B69AAM:      Margin of error: Persons: 25 years and over ~ Less than 9th grade
+        B69ABM:      Margin of error: Persons: 25 years and over ~ 9th grade to 3 years of college (until 1980) or to some college or associate's degree (since 1990)
+        B69ACM:      Margin of error: Persons: 25 years and over ~ 4 or more years of college (until 1980) or bachelor's degree or higher (since 1990)
+ 
+Table 3: (BD5) Per Capita Income in Previous Year
+        BD5AAM:      Margin of error: Per capita income in previous year
+ 
+--------------------------------------------------------------------------------
+Geographic Integration Methods
+--------------------------------------------------------------------------------
+ 
+Nominal Integration:
+
+    Nominally integrated tables link geographic units across time according to
+    their names and codes, disregarding any changes in unit boundaries. The
+    identified geographic units match those from each census source, so the
+    spatial definitions and total number of units may vary from one time to
+    another (e.g., a city may annex land, a tract may be split in two, a new
+    county may be created, etc.). The tables include data for a particular
+    geographic unit only at times when the unit's name or code was in use,
+    resulting in truncated time series for some areas.
+    
+    Users should be cautious when interpreting changes in nominally integrated
+    time series because a single unit code may refer to distinctly different
+    areas at different times. If you are uncertain whether any boundaries
+    changed in your areas of interest, we recommend inspecting NHGIS GIS files
+    to confirm. (NHGIS supplies GIS boundary files for all units and years in
+    nominally integrated time series *except* 1970 places and county
+    subdivisions.)
+    
+    Alternatively, for some topics and time periods, NHGIS provides
+    "geographically standardized" time series, which provide data from multiple
+    times for a single census's geographic units (e.g., 2000 and 2010 data for
+    2010 census units). A disadvantage of standardized time series is that, in
+    areas where source units do not nest perfectly within a unit of the standard
+    year (e.g., where a source 2000 unit intersects multiple 2010 units), NHGIS
+    applies interpolation to standardize the data, a process which may
+    occasionally produce substantial errors.
+
+Complete documentation on time series integration methods is available at:
+    https://www.nhgis.org/documentation/time-series
+ 
+--------------------------------------------------------------------------------
+Source Data
+--------------------------------------------------------------------------------
+ 
+Additional documentation on NHGIS data sources is available at:
+    https://www.nhgis.org/documentation/tabular-data
+
+Table 1: (B18) Persons by Race [5*]
+ 
+    Time series AA: Persons: White (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB001] Male >> White
+                        Variable: [CEB010] Female >> White
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB001] White
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY001] White
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Population by Race
+                    Universe: Persons
+                        Variable: [FMR001] White alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X002] White alone
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ADKX002] White alone
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AF2M002] White alone
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AHY2002] White alone
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AJWN002] White alone
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ALUC002] White alone
+        Year: 2020
+            Source dataset: 2020 Census: P.L. 94-171 Redistricting Data Summary File
+                Source table: P1. Race
+                    Universe: Total population
+                        Variable: [U7B003] Population of one race: White alone
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AMPW002] White alone
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AON5002] White alone
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AQNG002] White alone
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ASN2002] White alone
+ 
+    Time series AB: Persons: Black or African American (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB002] Male >> Negro
+                        Variable: [CEB011] Female >> Negro
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB002] Black
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY002] Black
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Population by Race
+                    Universe: Persons
+                        Variable: [FMR002] Black or African American alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X003] Black or African American alone
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ADKX003] Black or African American alone
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AF2M003] Black or African American alone
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AHY2003] Black or African American alone
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AJWN003] Black or African American alone
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ALUC003] Black or African American alone
+        Year: 2020
+            Source dataset: 2020 Census: P.L. 94-171 Redistricting Data Summary File
+                Source table: P1. Race
+                    Universe: Total population
+                        Variable: [U7B004] Population of one race: Black or African American alone
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AMPW003] Black or African American alone
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AON5003] Black or African American alone
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AQNG003] Black or African American alone
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ASN2003] Black or African American alone
+ 
+    Time series AC: Persons: American Indian and Alaska Native (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB003] Male >> Indian
+                        Variable: [CEB012] Female >> Indian
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB003] American Indian, Eskimo and Aleut: American Indian
+                        Variable: [DFB004] American Indian, Eskimo and Aleut: Eskimo
+                        Variable: [DFB005] American Indian, Eskimo and Aleut: Aleut
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY003] American Indian, Eskimo, or Aleut
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Population by Race
+                    Universe: Persons
+                        Variable: [FMR003] American Indian and Alaska Native alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X004] American Indian and Alaska Native alone
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ADKX004] American Indian and Alaska Native alone
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AF2M004] American Indian and Alaska Native alone
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AHY2004] American Indian and Alaska Native alone
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AJWN004] American Indian and Alaska Native alone
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ALUC004] American Indian and Alaska Native alone
+        Year: 2020
+            Source dataset: 2020 Census: P.L. 94-171 Redistricting Data Summary File
+                Source table: P1. Race
+                    Universe: Total population
+                        Variable: [U7B005] Population of one race: American Indian and Alaska Native alone
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AMPW004] American Indian and Alaska Native alone
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AON5004] American Indian and Alaska Native alone
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AQNG004] American Indian and Alaska Native alone
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ASN2004] American Indian and Alaska Native alone
+ 
+    Time series AD: Persons: Asian and Pacific Islander and Other Race (single race)
+        Year: 1970
+            Source dataset: 1970 Census: Count 2 - 100% Data [Tracts, Urban Areas, Metro Areas, etc.] 
+                Source table: NT1. Sex by Race
+                    Universe: Persons
+                        Variable: [CEB004] Male >> Japanese
+                        Variable: [CEB005] Male >> Chinese
+                        Variable: [CEB006] Male >> Filipino
+                        Variable: [CEB007] Male >> Hawaiian
+                        Variable: [CEB008] Male >> Korean
+                        Variable: [CEB009] Male >> Other
+                        Variable: [CEB013] Female >> Japanese
+                        Variable: [CEB014] Female >> Chinese
+                        Variable: [CEB015] Female >> Filipino
+                        Variable: [CEB016] Female >> Hawaiian
+                        Variable: [CEB017] Female >> Korean
+                        Variable: [CEB018] Female >> Other
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT12. Race
+                    Universe: Persons
+                        Variable: [DFB006] Asian and Pacific Islander: Japanese
+                        Variable: [DFB007] Asian and Pacific Islander: Chinese
+                        Variable: [DFB008] Asian and Pacific Islander: Filipino
+                        Variable: [DFB009] Asian and Pacific Islander: Korean
+                        Variable: [DFB010] Asian and Pacific Islander: Asian Indian
+                        Variable: [DFB011] Asian and Pacific Islander: Vietnamese
+                        Variable: [DFB012] Asian and Pacific Islander: Hawaiian
+                        Variable: [DFB013] Asian and Pacific Islander: Guamanian
+                        Variable: [DFB014] Asian and Pacific Islander: Samoan
+                        Variable: [DFB015] Asian and Pacific Islander: Other
+        Year: 1990
+            Source dataset: 1990 Census: STF 1 - 100% Data
+                Source table: NP6. Race
+                    Universe: Persons
+                        Variable: [EUY004] Asian or Pacific Islander
+                        Variable: [EUY005] Other race
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Population by Race
+                    Universe: Persons
+                        Variable: [FMR004] Asian alone
+                        Variable: [FMR005] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [FMR006] Some other race alone
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X005] Asian alone
+                        Variable: [H7X006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [H7X007] Some Other Race alone
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ADKX005] Asian alone
+                        Variable: [ADKX006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [ADKX007] Some other race alone
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AF2M005] Asian alone
+                        Variable: [AF2M006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [AF2M007] Some other race alone
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AHY2005] Asian alone
+                        Variable: [AHY2006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [AHY2007] Some other race alone
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AJWN005] Asian alone
+                        Variable: [AJWN006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [AJWN007] Some other race alone
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ALUC005] Asian alone
+                        Variable: [ALUC006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [ALUC007] Some other race alone
+        Year: 2020
+            Source dataset: 2020 Census: P.L. 94-171 Redistricting Data Summary File
+                Source table: P1. Race
+                    Universe: Total population
+                        Variable: [U7B006] Population of one race: Asian alone
+                        Variable: [U7B007] Population of one race: Native Hawaiian and Other Pacific Islander alone
+                        Variable: [U7B008] Population of one race: Some Other Race alone
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AMPW005] Asian alone
+                        Variable: [AMPW006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [AMPW007] Some other race alone
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AON5005] Asian alone
+                        Variable: [AON5006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [AON5007] Some other race alone
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AQNG005] Asian alone
+                        Variable: [AQNG006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [AQNG007] Some Other Race alone
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ASN2005] Asian alone
+                        Variable: [ASN2006] Native Hawaiian and Other Pacific Islander alone
+                        Variable: [ASN2007] Some Other Race alone
+ 
+    Time series AE: Persons: Two or More Races
+        Year: 1970
+            *NOT AVAILABLE for this time*
+        Year: 1980
+            *NOT AVAILABLE for this time*
+        Year: 1990
+            *NOT AVAILABLE for this time*
+        Year: 2000
+            Source dataset: 2000 Census: SF 1a - 100% Data [Areas Larger Than Block Groups]
+                Source table: NP007A. Population by Race
+                    Universe: Persons
+                        Variable: [FMR007] Two or more races
+        Year: 2010
+            Source dataset: 2010 Census: SF 1a - P & H Tables [Blocks & Larger Areas]
+                Source table: P3. Race
+                    Universe: Total population
+                        Variable: [H7X008] Two or More Races
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ADKX008] Two or more races
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AF2M008] Two or more races
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AHY2008] Two or more races
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AJWN008] Two or more races
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ALUC008] Two or more races
+        Year: 2020
+            Source dataset: 2020 Census: P.L. 94-171 Redistricting Data Summary File
+                Source table: P1. Race
+                    Universe: Total population
+                        Variable: [U7B009] Population of two or more races
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AMPW008] Two or more races
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AON5008] Two or more races
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [AQNG008] Two or More Races
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B02001. Race
+                    Universe: Total population
+                        Variable: [ASN2008] Two or More Races
+ 
+ 
+Table 2: (B69) Persons 25 Years and Over by Educational Attainment [3]
+ 
+    Time series AA: Persons: 25 years and over ~ Less than 9th grade
+        Year: 1970
+            Source dataset: 1970 Census: Count 4Pb - Sample-Based Population Data with Race/Ethnicity Breakdown
+                Source table: NT42. Sex by Years of School Completed
+                    Universe: Persons 25 Years and Over
+                        Variable: [C2M001] Male >> No school years completed (includes nursery and kindergarten)
+                        Variable: [C2M002] Male >> Elementary: 1-4 years
+                        Variable: [C2M003] Male >> Elementary: 5-6 years
+                        Variable: [C2M004] Male >> Elementary: 7 years
+                        Variable: [C2M005] Male >> Elementary: 8 years
+                        Variable: [C2M011] Female >> No school years completed (includes nursery and kindergarten)
+                        Variable: [C2M012] Female >> Elementary: 1-4 years
+                        Variable: [C2M013] Female >> Elementary: 5-6 years
+                        Variable: [C2M014] Female >> Elementary: 7 years
+                        Variable: [C2M015] Female >> Elementary: 8 years
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT48A. Years of School Completed
+                    Universe: Persons 25 Years and Over
+                        Variable: [DHM001] Elementary (0-8 years)
+        Year: 1990
+            Source dataset: 1990 Census: STF 3 - Sample-Based Data
+                Source table: NP57. Educational Attainment
+                    Universe: Persons 25 years and over
+                        Variable: [E33001] Less than 9th grade
+        Year: 2000
+            Source dataset: 2000 Census: SF 3a - Sample-Based Data [Areas Larger Than Block Groups]
+                Source table: NP037C. Population 25 Years and Over by Sex by Educational Attainment
+                    Universe: Persons 25 Years and Over
+                        Variable: [GKT001] Male >> No schooling completed
+                        Variable: [GKT002] Male >> Nursery to 4th grade
+                        Variable: [GKT003] Male >> 5th and 6th grade
+                        Variable: [GKT004] Male >> 7th and 8th grade
+                        Variable: [GKT017] Female >> No schooling completed
+                        Variable: [GKT018] Female >> Nursery to 4th grade
+                        Variable: [GKT019] Female >> 5th and 6th grade
+                        Variable: [GKT020] Female >> 7th and 8th grade
+        Year: 2006-2010
+            Source dataset: 2010 American Community Survey: 5-Year Data [2006-2010, Block Groups & Larger Areas]
+                Source table: B15002. Sex by Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [JN9003] Male: No schooling completed
+                        Variable: [JN9004] Male: Nursery to 4th grade
+                        Variable: [JN9005] Male: 5th and 6th grade
+                        Variable: [JN9006] Male: 7th and 8th grade
+                        Variable: [JN9020] Female: No schooling completed
+                        Variable: [JN9021] Female: Nursery to 4th grade
+                        Variable: [JN9022] Female: 5th and 6th grade
+                        Variable: [JN9023] Female: 7th and 8th grade
+        Year: 2007-2011
+            Source dataset: 2011 American Community Survey: 5-Year Data [2007-2011, Block Groups & Larger Areas]
+                Source table: B15002. Sex by Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [MPS003] Male: No schooling completed
+                        Variable: [MPS004] Male: Nursery to 4th grade
+                        Variable: [MPS005] Male: 5th and 6th grade
+                        Variable: [MPS006] Male: 7th and 8th grade
+                        Variable: [MPS020] Female: No schooling completed
+                        Variable: [MPS021] Female: Nursery to 4th grade
+                        Variable: [MPS022] Female: 5th and 6th grade
+                        Variable: [MPS023] Female: 7th and 8th grade
+        Year: 2008-2012
+            Source dataset: 2012 American Community Survey: 5-Year Data [2008-2012, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [QUS002] No schooling completed
+                        Variable: [QUS003] Nursery school
+                        Variable: [QUS004] Kindergarten
+                        Variable: [QUS005] 1st grade
+                        Variable: [QUS006] 2nd grade
+                        Variable: [QUS007] 3rd grade
+                        Variable: [QUS008] 4th grade
+                        Variable: [QUS009] 5th grade
+                        Variable: [QUS010] 6th grade
+                        Variable: [QUS011] 7th grade
+                        Variable: [QUS012] 8th grade
+        Year: 2009-2013
+            Source dataset: 2013 American Community Survey: 5-Year Data [2009-2013, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [UGS002] No schooling completed
+                        Variable: [UGS003] Nursery school
+                        Variable: [UGS004] Kindergarten
+                        Variable: [UGS005] 1st grade
+                        Variable: [UGS006] 2nd grade
+                        Variable: [UGS007] 3rd grade
+                        Variable: [UGS008] 4th grade
+                        Variable: [UGS009] 5th grade
+                        Variable: [UGS010] 6th grade
+                        Variable: [UGS011] 7th grade
+                        Variable: [UGS012] 8th grade
+        Year: 2010-2014
+            Source dataset: 2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ABC4002] No schooling completed
+                        Variable: [ABC4003] Nursery school
+                        Variable: [ABC4004] Kindergarten
+                        Variable: [ABC4005] 1st grade
+                        Variable: [ABC4006] 2nd grade
+                        Variable: [ABC4007] 3rd grade
+                        Variable: [ABC4008] 4th grade
+                        Variable: [ABC4009] 5th grade
+                        Variable: [ABC4010] 6th grade
+                        Variable: [ABC4011] 7th grade
+                        Variable: [ABC4012] 8th grade
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ADMZ002] No schooling completed
+                        Variable: [ADMZ003] Nursery school
+                        Variable: [ADMZ004] Kindergarten
+                        Variable: [ADMZ005] 1st grade
+                        Variable: [ADMZ006] 2nd grade
+                        Variable: [ADMZ007] 3rd grade
+                        Variable: [ADMZ008] 4th grade
+                        Variable: [ADMZ009] 5th grade
+                        Variable: [ADMZ010] 6th grade
+                        Variable: [ADMZ011] 7th grade
+                        Variable: [ADMZ012] 8th grade
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AF4O002] No schooling completed
+                        Variable: [AF4O003] Nursery school
+                        Variable: [AF4O004] Kindergarten
+                        Variable: [AF4O005] 1st grade
+                        Variable: [AF4O006] 2nd grade
+                        Variable: [AF4O007] 3rd grade
+                        Variable: [AF4O008] 4th grade
+                        Variable: [AF4O009] 5th grade
+                        Variable: [AF4O010] 6th grade
+                        Variable: [AF4O011] 7th grade
+                        Variable: [AF4O012] 8th grade
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AH04002] No schooling completed
+                        Variable: [AH04003] Nursery school
+                        Variable: [AH04004] Kindergarten
+                        Variable: [AH04005] 1st grade
+                        Variable: [AH04006] 2nd grade
+                        Variable: [AH04007] 3rd grade
+                        Variable: [AH04008] 4th grade
+                        Variable: [AH04009] 5th grade
+                        Variable: [AH04010] 6th grade
+                        Variable: [AH04011] 7th grade
+                        Variable: [AH04012] 8th grade
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AJYP002] No schooling completed
+                        Variable: [AJYP003] Nursery school
+                        Variable: [AJYP004] Kindergarten
+                        Variable: [AJYP005] 1st grade
+                        Variable: [AJYP006] 2nd grade
+                        Variable: [AJYP007] 3rd grade
+                        Variable: [AJYP008] 4th grade
+                        Variable: [AJYP009] 5th grade
+                        Variable: [AJYP010] 6th grade
+                        Variable: [AJYP011] 7th grade
+                        Variable: [AJYP012] 8th grade
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ALWG002] No schooling completed
+                        Variable: [ALWG003] Nursery school
+                        Variable: [ALWG004] Kindergarten
+                        Variable: [ALWG005] 1st grade
+                        Variable: [ALWG006] 2nd grade
+                        Variable: [ALWG007] 3rd grade
+                        Variable: [ALWG008] 4th grade
+                        Variable: [ALWG009] 5th grade
+                        Variable: [ALWG010] 6th grade
+                        Variable: [ALWG011] 7th grade
+                        Variable: [ALWG012] 8th grade
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AMRZ002] No schooling completed
+                        Variable: [AMRZ003] Nursery school
+                        Variable: [AMRZ004] Kindergarten
+                        Variable: [AMRZ005] 1st grade
+                        Variable: [AMRZ006] 2nd grade
+                        Variable: [AMRZ007] 3rd grade
+                        Variable: [AMRZ008] 4th grade
+                        Variable: [AMRZ009] 5th grade
+                        Variable: [AMRZ010] 6th grade
+                        Variable: [AMRZ011] 7th grade
+                        Variable: [AMRZ012] 8th grade
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AOP8002] No schooling completed
+                        Variable: [AOP8003] Nursery school
+                        Variable: [AOP8004] Kindergarten
+                        Variable: [AOP8005] 1st grade
+                        Variable: [AOP8006] 2nd grade
+                        Variable: [AOP8007] 3rd grade
+                        Variable: [AOP8008] 4th grade
+                        Variable: [AOP8009] 5th grade
+                        Variable: [AOP8010] 6th grade
+                        Variable: [AOP8011] 7th grade
+                        Variable: [AOP8012] 8th grade
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AQPK002] No schooling completed
+                        Variable: [AQPK003] Nursery school
+                        Variable: [AQPK004] Kindergarten
+                        Variable: [AQPK005] 1st grade
+                        Variable: [AQPK006] 2nd grade
+                        Variable: [AQPK007] 3rd grade
+                        Variable: [AQPK008] 4th grade
+                        Variable: [AQPK009] 5th grade
+                        Variable: [AQPK010] 6th grade
+                        Variable: [AQPK011] 7th grade
+                        Variable: [AQPK012] 8th grade
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ASP3002] No schooling completed
+                        Variable: [ASP3003] Nursery school
+                        Variable: [ASP3004] Kindergarten
+                        Variable: [ASP3005] 1st grade
+                        Variable: [ASP3006] 2nd grade
+                        Variable: [ASP3007] 3rd grade
+                        Variable: [ASP3008] 4th grade
+                        Variable: [ASP3009] 5th grade
+                        Variable: [ASP3010] 6th grade
+                        Variable: [ASP3011] 7th grade
+                        Variable: [ASP3012] 8th grade
+ 
+    Time series AB: Persons: 25 years and over ~ 9th grade to 3 years of college (until 1980) or to some college or associate's degree (since 1990)
+        Year: 1970
+            Source dataset: 1970 Census: Count 4Pb - Sample-Based Population Data with Race/Ethnicity Breakdown
+                Source table: NT42. Sex by Years of School Completed
+                    Universe: Persons 25 Years and Over
+                        Variable: [C2M006] Male >> High school: 1-3 years
+                        Variable: [C2M007] Male >> High school: 4 years
+                        Variable: [C2M008] Male >> College: 1-3 years
+                        Variable: [C2M016] Female >> High school: 1-3 years
+                        Variable: [C2M017] Female >> High school: 4 years
+                        Variable: [C2M018] Female >> College: 1-3 years
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT48A. Years of School Completed
+                    Universe: Persons 25 Years and Over
+                        Variable: [DHM002] High school: 1-3 years
+                        Variable: [DHM003] High school: 4 years
+                        Variable: [DHM004] College: 1-3 years
+        Year: 1990
+            Source dataset: 1990 Census: STF 3 - Sample-Based Data
+                Source table: NP57. Educational Attainment
+                    Universe: Persons 25 years and over
+                        Variable: [E33002] 9th to 12th grade, no diploma
+                        Variable: [E33003] High school graduate (includes equivalency)
+                        Variable: [E33004] Some college, no degree
+                        Variable: [E33005] Associate degree
+        Year: 2000
+            Source dataset: 2000 Census: SF 3a - Sample-Based Data [Areas Larger Than Block Groups]
+                Source table: NP037C. Population 25 Years and Over by Sex by Educational Attainment
+                    Universe: Persons 25 Years and Over
+                        Variable: [GKT005] Male >> 9th grade
+                        Variable: [GKT006] Male >> 10th grade
+                        Variable: [GKT007] Male >> 11th grade
+                        Variable: [GKT008] Male >> 12th grade, no diploma
+                        Variable: [GKT009] Male >> High school graduate (includes equivalency)
+                        Variable: [GKT010] Male >> Some college, less than 1 year
+                        Variable: [GKT011] Male >> Some college, 1 or more years, no degree
+                        Variable: [GKT012] Male >> Associate degree
+                        Variable: [GKT021] Female >> 9th grade
+                        Variable: [GKT022] Female >> 10th grade
+                        Variable: [GKT023] Female >> 11th grade
+                        Variable: [GKT024] Female >> 12th grade, no diploma
+                        Variable: [GKT025] Female >> High school graduate (includes equivalency)
+                        Variable: [GKT026] Female >> Some college, less than 1 year
+                        Variable: [GKT027] Female >> Some college, 1 or more years, no degree
+                        Variable: [GKT028] Female >> Associate degree
+        Year: 2006-2010
+            Source dataset: 2010 American Community Survey: 5-Year Data [2006-2010, Block Groups & Larger Areas]
+                Source table: B15002. Sex by Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [JN9007] Male: 9th grade
+                        Variable: [JN9008] Male: 10th grade
+                        Variable: [JN9009] Male: 11th grade
+                        Variable: [JN9010] Male: 12th grade, no diploma
+                        Variable: [JN9011] Male: High school graduate, GED, or alternative
+                        Variable: [JN9012] Male: Some college, less than 1 year
+                        Variable: [JN9013] Male: Some college, 1 or more years, no degree
+                        Variable: [JN9014] Male: Associate's degree
+                        Variable: [JN9024] Female: 9th grade
+                        Variable: [JN9025] Female: 10th grade
+                        Variable: [JN9026] Female: 11th grade
+                        Variable: [JN9027] Female: 12th grade, no diploma
+                        Variable: [JN9028] Female: High school graduate, GED, or alternative
+                        Variable: [JN9029] Female: Some college, less than 1 year
+                        Variable: [JN9030] Female: Some college, 1 or more years, no degree
+                        Variable: [JN9031] Female: Associate's degree
+        Year: 2007-2011
+            Source dataset: 2011 American Community Survey: 5-Year Data [2007-2011, Block Groups & Larger Areas]
+                Source table: B15002. Sex by Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [MPS007] Male: 9th grade
+                        Variable: [MPS008] Male: 10th grade
+                        Variable: [MPS009] Male: 11th grade
+                        Variable: [MPS010] Male: 12th grade, no diploma
+                        Variable: [MPS011] Male: High school graduate, GED, or alternative
+                        Variable: [MPS012] Male: Some college, less than 1 year
+                        Variable: [MPS013] Male: Some college, 1 or more years, no degree
+                        Variable: [MPS014] Male: Associate's degree
+                        Variable: [MPS024] Female: 9th grade
+                        Variable: [MPS025] Female: 10th grade
+                        Variable: [MPS026] Female: 11th grade
+                        Variable: [MPS027] Female: 12th grade, no diploma
+                        Variable: [MPS028] Female: High school graduate, GED, or alternative
+                        Variable: [MPS029] Female: Some college, less than 1 year
+                        Variable: [MPS030] Female: Some college, 1 or more years, no degree
+                        Variable: [MPS031] Female: Associate's degree
+        Year: 2008-2012
+            Source dataset: 2012 American Community Survey: 5-Year Data [2008-2012, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [QUS013] 9th grade
+                        Variable: [QUS014] 10th grade
+                        Variable: [QUS015] 11th grade
+                        Variable: [QUS016] 12th grade, no diploma
+                        Variable: [QUS017] Regular high school diploma
+                        Variable: [QUS018] GED or alternative credential
+                        Variable: [QUS019] Some college, less than 1 year
+                        Variable: [QUS020] Some college, 1 or more years, no degree
+                        Variable: [QUS021] Associate's degree
+        Year: 2009-2013
+            Source dataset: 2013 American Community Survey: 5-Year Data [2009-2013, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [UGS013] 9th grade
+                        Variable: [UGS014] 10th grade
+                        Variable: [UGS015] 11th grade
+                        Variable: [UGS016] 12th grade, no diploma
+                        Variable: [UGS017] Regular high school diploma
+                        Variable: [UGS018] GED or alternative credential
+                        Variable: [UGS019] Some college, less than 1 year
+                        Variable: [UGS020] Some college, 1 or more years, no degree
+                        Variable: [UGS021] Associate's degree
+        Year: 2010-2014
+            Source dataset: 2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ABC4013] 9th grade
+                        Variable: [ABC4014] 10th grade
+                        Variable: [ABC4015] 11th grade
+                        Variable: [ABC4016] 12th grade, no diploma
+                        Variable: [ABC4017] Regular high school diploma
+                        Variable: [ABC4018] GED or alternative credential
+                        Variable: [ABC4019] Some college, less than 1 year
+                        Variable: [ABC4020] Some college, 1 or more years, no degree
+                        Variable: [ABC4021] Associate's degree
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ADMZ013] 9th grade
+                        Variable: [ADMZ014] 10th grade
+                        Variable: [ADMZ015] 11th grade
+                        Variable: [ADMZ016] 12th grade, no diploma
+                        Variable: [ADMZ017] Regular high school diploma
+                        Variable: [ADMZ018] GED or alternative credential
+                        Variable: [ADMZ019] Some college, less than 1 year
+                        Variable: [ADMZ020] Some college, 1 or more years, no degree
+                        Variable: [ADMZ021] Associate's degree
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AF4O013] 9th grade
+                        Variable: [AF4O014] 10th grade
+                        Variable: [AF4O015] 11th grade
+                        Variable: [AF4O016] 12th grade, no diploma
+                        Variable: [AF4O017] Regular high school diploma
+                        Variable: [AF4O018] GED or alternative credential
+                        Variable: [AF4O019] Some college, less than 1 year
+                        Variable: [AF4O020] Some college, 1 or more years, no degree
+                        Variable: [AF4O021] Associate's degree
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AH04013] 9th grade
+                        Variable: [AH04014] 10th grade
+                        Variable: [AH04015] 11th grade
+                        Variable: [AH04016] 12th grade, no diploma
+                        Variable: [AH04017] Regular high school diploma
+                        Variable: [AH04018] GED or alternative credential
+                        Variable: [AH04019] Some college, less than 1 year
+                        Variable: [AH04020] Some college, 1 or more years, no degree
+                        Variable: [AH04021] Associate's degree
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AJYP013] 9th grade
+                        Variable: [AJYP014] 10th grade
+                        Variable: [AJYP015] 11th grade
+                        Variable: [AJYP016] 12th grade, no diploma
+                        Variable: [AJYP017] Regular high school diploma
+                        Variable: [AJYP018] GED or alternative credential
+                        Variable: [AJYP019] Some college, less than 1 year
+                        Variable: [AJYP020] Some college, 1 or more years, no degree
+                        Variable: [AJYP021] Associate's degree
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ALWG013] 9th grade
+                        Variable: [ALWG014] 10th grade
+                        Variable: [ALWG015] 11th grade
+                        Variable: [ALWG016] 12th grade, no diploma
+                        Variable: [ALWG017] Regular high school diploma
+                        Variable: [ALWG018] GED or alternative credential
+                        Variable: [ALWG019] Some college, less than 1 year
+                        Variable: [ALWG020] Some college, 1 or more years, no degree
+                        Variable: [ALWG021] Associate's degree
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AMRZ013] 9th grade
+                        Variable: [AMRZ014] 10th grade
+                        Variable: [AMRZ015] 11th grade
+                        Variable: [AMRZ016] 12th grade, no diploma
+                        Variable: [AMRZ017] Regular high school diploma
+                        Variable: [AMRZ018] GED or alternative credential
+                        Variable: [AMRZ019] Some college, less than 1 year
+                        Variable: [AMRZ020] Some college, 1 or more years, no degree
+                        Variable: [AMRZ021] Associate's degree
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AOP8013] 9th grade
+                        Variable: [AOP8014] 10th grade
+                        Variable: [AOP8015] 11th grade
+                        Variable: [AOP8016] 12th grade, no diploma
+                        Variable: [AOP8017] Regular high school diploma
+                        Variable: [AOP8018] GED or alternative credential
+                        Variable: [AOP8019] Some college, less than 1 year
+                        Variable: [AOP8020] Some college, 1 or more years, no degree
+                        Variable: [AOP8021] Associate's degree
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AQPK013] 9th grade
+                        Variable: [AQPK014] 10th grade
+                        Variable: [AQPK015] 11th grade
+                        Variable: [AQPK016] 12th grade, no diploma
+                        Variable: [AQPK017] Regular high school diploma
+                        Variable: [AQPK018] GED or alternative credential
+                        Variable: [AQPK019] Some college, less than 1 year
+                        Variable: [AQPK020] Some college, 1 or more years, no degree
+                        Variable: [AQPK021] Associate's degree
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ASP3013] 9th grade
+                        Variable: [ASP3014] 10th grade
+                        Variable: [ASP3015] 11th grade
+                        Variable: [ASP3016] 12th grade, no diploma
+                        Variable: [ASP3017] Regular high school diploma
+                        Variable: [ASP3018] GED or alternative credential
+                        Variable: [ASP3019] Some college, less than 1 year
+                        Variable: [ASP3020] Some college, 1 or more years, no degree
+                        Variable: [ASP3021] Associate's degree
+ 
+    Time series AC: Persons: 25 years and over ~ 4 or more years of college (until 1980) or bachelor's degree or higher (since 1990)
+        Year: 1970
+            Source dataset: 1970 Census: Count 4Pb - Sample-Based Population Data with Race/Ethnicity Breakdown
+                Source table: NT42. Sex by Years of School Completed
+                    Universe: Persons 25 Years and Over
+                        Variable: [C2M009] Male >> College: 4
+                        Variable: [C2M010] Male >> College: 5 years or more
+                        Variable: [C2M019] Female >> College: 4
+                        Variable: [C2M020] Female >> College: 5 years or more
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT48A. Years of School Completed
+                    Universe: Persons 25 Years and Over
+                        Variable: [DHM005] College: 4 or more years
+        Year: 1990
+            Source dataset: 1990 Census: STF 3 - Sample-Based Data
+                Source table: NP57. Educational Attainment
+                    Universe: Persons 25 years and over
+                        Variable: [E33006] Bachelor's degree
+                        Variable: [E33007] Graduate or professional degree
+        Year: 2000
+            Source dataset: 2000 Census: SF 3a - Sample-Based Data [Areas Larger Than Block Groups]
+                Source table: NP037C. Population 25 Years and Over by Sex by Educational Attainment
+                    Universe: Persons 25 Years and Over
+                        Variable: [GKT013] Male >> Bachelor's degree
+                        Variable: [GKT014] Male >> Master's degree
+                        Variable: [GKT015] Male >> Professional school degree
+                        Variable: [GKT016] Male >> Doctorate degree
+                        Variable: [GKT029] Female >> Bachelor's degree
+                        Variable: [GKT030] Female >> Master's degree
+                        Variable: [GKT031] Female >> Professional school degree
+                        Variable: [GKT032] Female >> Doctorate degree
+        Year: 2006-2010
+            Source dataset: 2010 American Community Survey: 5-Year Data [2006-2010, Block Groups & Larger Areas]
+                Source table: B15002. Sex by Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [JN9015] Male: Bachelor's degree
+                        Variable: [JN9016] Male: Master's degree
+                        Variable: [JN9017] Male: Professional school degree
+                        Variable: [JN9018] Male: Doctorate degree
+                        Variable: [JN9032] Female: Bachelor's degree
+                        Variable: [JN9033] Female: Master's degree
+                        Variable: [JN9034] Female: Professional school degree
+                        Variable: [JN9035] Female: Doctorate degree
+        Year: 2007-2011
+            Source dataset: 2011 American Community Survey: 5-Year Data [2007-2011, Block Groups & Larger Areas]
+                Source table: B15002. Sex by Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [MPS015] Male: Bachelor's degree
+                        Variable: [MPS016] Male: Master's degree
+                        Variable: [MPS017] Male: Professional school degree
+                        Variable: [MPS018] Male: Doctorate degree
+                        Variable: [MPS032] Female: Bachelor's degree
+                        Variable: [MPS033] Female: Master's degree
+                        Variable: [MPS034] Female: Professional school degree
+                        Variable: [MPS035] Female: Doctorate degree
+        Year: 2008-2012
+            Source dataset: 2012 American Community Survey: 5-Year Data [2008-2012, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [QUS022] Bachelor's degree
+                        Variable: [QUS023] Master's degree
+                        Variable: [QUS024] Professional school degree
+                        Variable: [QUS025] Doctorate degree
+        Year: 2009-2013
+            Source dataset: 2013 American Community Survey: 5-Year Data [2009-2013, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [UGS022] Bachelor's degree
+                        Variable: [UGS023] Master's degree
+                        Variable: [UGS024] Professional school degree
+                        Variable: [UGS025] Doctorate degree
+        Year: 2010-2014
+            Source dataset: 2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ABC4022] Bachelor's degree
+                        Variable: [ABC4023] Master's degree
+                        Variable: [ABC4024] Professional school degree
+                        Variable: [ABC4025] Doctorate degree
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ADMZ022] Bachelor's degree
+                        Variable: [ADMZ023] Master's degree
+                        Variable: [ADMZ024] Professional school degree
+                        Variable: [ADMZ025] Doctorate degree
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AF4O022] Bachelor's degree
+                        Variable: [AF4O023] Master's degree
+                        Variable: [AF4O024] Professional school degree
+                        Variable: [AF4O025] Doctorate degree
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AH04022] Bachelor's degree
+                        Variable: [AH04023] Master's degree
+                        Variable: [AH04024] Professional school degree
+                        Variable: [AH04025] Doctorate degree
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AJYP022] Bachelor's degree
+                        Variable: [AJYP023] Master's degree
+                        Variable: [AJYP024] Professional school degree
+                        Variable: [AJYP025] Doctorate degree
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ALWG022] Bachelor's degree
+                        Variable: [ALWG023] Master's degree
+                        Variable: [ALWG024] Professional school degree
+                        Variable: [ALWG025] Doctorate degree
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AMRZ022] Bachelor's degree
+                        Variable: [AMRZ023] Master's degree
+                        Variable: [AMRZ024] Professional school degree
+                        Variable: [AMRZ025] Doctorate degree
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AOP8022] Bachelor's degree
+                        Variable: [AOP8023] Master's degree
+                        Variable: [AOP8024] Professional school degree
+                        Variable: [AOP8025] Doctorate degree
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [AQPK022] Bachelor's degree
+                        Variable: [AQPK023] Master's degree
+                        Variable: [AQPK024] Professional school degree
+                        Variable: [AQPK025] Doctorate degree
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B15003. Educational Attainment for the Population 25 Years and Over
+                    Universe: Population 25 years and over
+                        Variable: [ASP3022] Bachelor's degree
+                        Variable: [ASP3023] Master's degree
+                        Variable: [ASP3024] Professional school degree
+                        Variable: [ASP3025] Doctorate degree
+ 
+ 
+Table 3: (BD5) Per Capita Income in Previous Year
+ 
+    Time series AA: Per capita income in previous year
+        Year: 1980
+            Source dataset: 1980 Census: STF 3 - Sample-Based Data
+                Source table: NT85A. Per Capita Income in 1979
+                    Universe: Persons
+                        Variable: [DIZ001] Per capita income in 1979
+        Year: 1990
+            Source dataset: 1990 Census: STF 3 - Sample-Based Data
+                Source table: NP114A. Per Capita Income in 1989
+                    Universe: Persons
+                        Variable: [E01001] Per capita income in 1989
+        Year: 2000
+            Source dataset: 2000 Census: SF 3a - Sample-Based Data [Areas Larger Than Block Groups]
+                Source table: NP082A. Per Capita Income in 1999
+                    Universe: Persons
+                        Variable: [GNW001] Per capita income in 1999
+        Year: 2006-2010
+            Source dataset: 2010 American Community Survey: 5-Year Data [2006-2010, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2010 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [JQB001] Per capita income in the past 12 months (in 2010 inflation-adjusted dollars)
+        Year: 2007-2011
+            Source dataset: 2011 American Community Survey: 5-Year Data [2007-2011, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2011 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [MRU001] Per capita income in the past 12 months (in 2011 inflation-adjusted dollars)
+        Year: 2008-2012
+            Source dataset: 2012 American Community Survey: 5-Year Data [2008-2012, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2012 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [QWU001] Per capita income in the past 12 months (in 2012 inflation-adjusted dollars)
+        Year: 2009-2013
+            Source dataset: 2013 American Community Survey: 5-Year Data [2009-2013, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2013 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [UJA001] Per capita income in the past 12 months (in 2013 inflation-adjusted dollars)
+        Year: 2010-2014
+            Source dataset: 2014 American Community Survey: 5-Year Data [2010-2014, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2014 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [ABFI001] Per capita income in the past 12 months (in 2014 inflation-adjusted dollars)
+        Year: 2011-2015
+            Source dataset: 2015 American Community Survey: 5-Year Data [2011-2015, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2015 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [ADOL001] Per capita income in the past 12 months (in 2015 inflation-adjusted dollars)
+        Year: 2012-2016
+            Source dataset: 2016 American Community Survey: 5-Year Data [2012-2016, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2016 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [AF6A001] Per capita income in the past 12 months (in 2016 inflation-adjusted dollars)
+        Year: 2013-2017
+            Source dataset: 2017 American Community Survey: 5-Year Data [2013-2017, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2017 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [AH2R001] Per capita income in the past 12 months (in 2017 inflation-adjusted dollars)
+        Year: 2014-2018
+            Source dataset: 2018 American Community Survey: 5-Year Data [2014-2018, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2018 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [AJ0E001] Per capita income in the past 12 months (in 2018 inflation-adjusted dollars)
+        Year: 2015-2019
+            Source dataset: 2019 American Community Survey: 5-Year Data [2015-2019, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2019 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [ALX5001] Per capita income in the past 12 months (in 2019 inflation-adjusted dollars)
+        Year: 2016-2020
+            Source dataset: 2020 American Community Survey: 5-Year Data [2016-2020, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2020 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [AMTC001] Per capita income in the past 12 months (in 2020 inflation-adjusted dollars)
+        Year: 2017-2021
+            Source dataset: 2021 American Community Survey: 5-Year Data [2017-2021, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2021 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [AORM001] Per capita income in the past 12 months (in 2021 inflation-adjusted dollars)
+        Year: 2018-2022
+            Source dataset: 2022 American Community Survey: 5-Year Data [2018-2022, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [AQRA001] Per capita income in the past 12 months (in 2022 inflation-adjusted dollars)
+        Year: 2019-2023
+            Source dataset: 2023 American Community Survey: 5-Year Data [2019-2023, Block Groups & Larger Areas]
+                Source table: B19301. Per Capita Income in the Past 12 Months (in 2023 Inflation-Adjusted Dollars)
+                    Universe: Total population
+                        Variable: [ASRT001] Per capita income in the past 12 months (in 2023 inflation-adjusted dollars)
+ 
+--------------------------------------------------------------------------------
+Citation and Use of NHGIS Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* REDISTRIBUTION: You will not redistribute the data without permission.
+
+  You may publish a subset of the data to meet journal requirements for accessing 
+  data related to a particular publication. Contact us for permission for any other 
+  redistribution; we will consider requests for free and commercial redistribution.
+
+* CITATION: You will cite NHGIS appropriately.
+
+    * Publications and research reports employing NHGIS data (either tabular or GIS) 
+      should include the following citation:
+
+        Steven Manson, Jonathan Schroeder, David Van Riper, Katherine Knowles, Tracy Kugler, Finn Roberts, and Steven Ruggles.
+        IPUMS National Historical Geographic Information System: Version 19.0 
+        [dataset]. Minneapolis, MN: IPUMS. 2024. 
+        http://doi.org/10.18128/D050.V19.0
+
+    * For policy briefs, online resources, or articles in the popular press, we 
+      recommend that you cite the use of NHGIS data as follows:
+
+        IPUMS NHGIS, University of Minnesota, www.nhgis.org.
+
+These terms of use are a legally binding agreement. You can use the data only in 
+accordance with these terms, and any other use is a violation of the agreement. 
+Violations may result in revocation of the agreement and prohibition from using other 
+IPUMS data. If IPUMS or our partners are harmed from your violation, you are 
+responsible for all damages, including reasonable attorney's fees and expenses.
+        
+In addition, we request that users send us a copy of any publications, research
+reports, or educational material making use of the data or documentation.
+
+Send electronic material to: nhgis@umn.edu
+
+Printed matter should be sent to:
+
+    IPUMS NHGIS
+    Institute for Social Research and Data Innovation
+    University of Minnesota
+    50 Willey Hall
+    225 19th Ave S
+    Minneapolis, MN 55455
